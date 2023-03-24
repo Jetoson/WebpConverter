@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Converter</title>
+</head>
+<body>
+  <h1>Image Converter</h1>
+
+  <div>
+    <label for="original-image">Choose an image to convert:</label>
+    <input type="file" id="original-image">
+  </div>
+
+  <div id="drop-zone" style="border: 1px dashed black; width: 400px;
+   height: 200px; text-align: center; margin-top: 20px; overflow: hidden;">
+    <p>Drag and drop an image file here</p>
+  </div>
+  
+  <br>
+
+  <div>
+    <label for="format-select">Choose the output format:</label>
+    <select id="format-select">
+      <option value="jpeg">JPEG</option>
+      <option value="png">PNG</option>
+      <option value="bmp">BMP</option>
+    </select>
+  </div>
+
+  <div>
+    <input type="checkbox" style="display:none" id="display-checkbox" checked >
+    <label for="display-checkbox" style="display:none;">Display converted image</label>
+  </div>
+
+  <div>
+    <button onclick="convertImage()" style="font-size: 24px; background-color: green; 
+    color: white; border: none; padding: 10px 20px; cursor: pointer; transition: 
+    background-color 0.3s ease;">Convert</button>
+  </div>
+  
+  <div>
+    <a id="download-button" style="display: none;">Download converted image</a>
+  </div>
+
+  <div>
+    <img id="converted-image" alt="Converted image" style="display:none;">
+  </div>
+
+  <script src="converter.js"></script>
+</body>
+</html>
